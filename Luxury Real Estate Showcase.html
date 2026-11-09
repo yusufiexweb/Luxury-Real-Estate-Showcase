@@ -1,0 +1,2755 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f1eb">
+  <meta name="description" content="NOVA333X presents a considered collection of exceptional architecture, private residences, and places with a point of view.">
+  <meta name="referrer" content="no-referrer">
+
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://images.squarespace-cdn.com https://framerusercontent.com https://static.wixstatic.com; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+
+  <title>NOVA333X — Private Residences &amp; Architecture</title>
+
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f4f1eb;
+      --paper-alt: #eae5dc;
+      --surface: #faf8f4;
+      --ink: #24231f;
+      --muted: #77736b;
+      --line: #d7d1c7;
+      --accent: #927a5d;
+      --accent-deep: #594a38;
+      --dark: #252722;
+      --dark-muted: #b6b2a7;
+      --serif: "Inter", "Segoe UI", Arial, sans-serif;
+      --sans: "Inter", "Segoe UI", Arial, sans-serif;
+      --ease: cubic-bezier(.2,.8,.2,1);
+    }
+
+    :root[data-theme="dark"] {
+      color-scheme: dark;
+      --paper: #191a17;
+      --paper-alt: #24251f;
+      --surface: #20211d;
+      --ink: #f0ede6;
+      --muted: #b0aa9f;
+      --line: #3a3932;
+      --accent: #c6aa82;
+      --accent-deep: #e3c9a5;
+      --dark: #111310;
+      --dark-muted: #b6b2a7;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      min-width: 320px;
+      background: var(--paper);
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-width: 320px;
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 14px/1.65 var(--sans);
+      -webkit-font-smoothing: antialiased;
+      transition: background .28s, color .28s;
+    }
+
+    button, input { font: inherit; }
+
+    button {
+      color: inherit;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button:focus-visible,
+    input:focus-visible,
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    ::selection {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    [hidden] { display: none !important; }
+
+    .page-shell { overflow: clip; }
+
+    .site-header {
+      position: relative;
+      z-index: 4;
+      width: min(100% - 80px, 1480px);
+      height: 88px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .brand-crest {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+    }
+
+    .brand-crest svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    .brand-lockup {
+      font-size: 13px;
+      font-weight: 780;
+      letter-spacing: .19em;
+      line-height: 1.15;
+    }
+
+    .brand-lockup small {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 7px;
+      font-weight: 650;
+      letter-spacing: .23em;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: clamp(17px, 3vw, 40px);
+      margin-left: auto;
+    }
+
+    .nav-link {
+      padding: 8px 0;
+      border: 0;
+      background: none;
+      color: var(--muted);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      transition: color .2s;
+    }
+
+    .nav-link:hover { color: var(--accent); }
+
+    .header-tools {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      margin-left: clamp(22px, 4vw, 54px);
+    }
+
+    .auth-link,
+    .auth-cta {
+      min-height: 36px;
+      border: 0;
+      background: none;
+      color: var(--ink);
+      font-size: 8px;
+      font-weight: 720;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .auth-link { color: var(--muted); }
+    .auth-link:hover { color: var(--accent); }
+
+    .auth-cta {
+      padding: 0 12px;
+      border: 1px solid var(--accent);
+      color: var(--accent-deep);
+      transition: background .2s, color .2s;
+    }
+
+    .auth-cta:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .theme-toggle,
+    .menu-toggle {
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      background: transparent;
+      transition: border-color .2s, color .2s, background .2s;
+    }
+
+    .theme-toggle {
+      width: 37px;
+      height: 37px;
+      border-radius: 50%;
+      color: var(--muted);
+    }
+
+    .theme-toggle:hover,
+    .menu-toggle:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .theme-toggle svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .menu-toggle {
+      width: 42px;
+      height: 42px;
+      align-content: center;
+      gap: 5px;
+      border-radius: 50%;
+    }
+
+    .menu-toggle span {
+      width: 15px;
+      height: 1px;
+      display: block;
+      background: currentColor;
+      transition: transform .24s var(--ease);
+    }
+
+    .menu-toggle[aria-expanded="true"] span:first-child {
+      transform: translateY(3px) rotate(45deg);
+    }
+
+    .menu-toggle[aria-expanded="true"] span:last-child {
+      transform: translateY(-3px) rotate(-45deg);
+    }
+
+    .hero {
+      width: min(100% - 80px, 1480px);
+      min-height: 690px;
+      margin: auto;
+      padding: 62px 0 62px;
+      display: grid;
+      grid-template-columns: minmax(0, .8fr) minmax(480px, 1.2fr);
+      align-items: center;
+      gap: 5.5%;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 1;
+      padding: 0 0 8px 3.2%;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      margin: 0 0 27px;
+      color: var(--accent);
+      font-size: 8px;
+      font-weight: 760;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 25px;
+      height: 1px;
+      content: "";
+      background: currentColor;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      max-width: 580px;
+      margin-bottom: 23px;
+      font-family: var(--serif);
+      font-size: clamp(58px, 7.4vw, 101px);
+      font-weight: 400;
+      letter-spacing: -.075em;
+      line-height: .96;
+    }
+
+    h1 em {
+      color: var(--accent);
+      font-weight: 400;
+    }
+
+    .hero-copy > p:not(.eyebrow) {
+      max-width: 355px;
+      margin-bottom: 28px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.9;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 11px;
+    }
+
+    .button {
+      min-height: 45px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 0 17px;
+      border: 1px solid var(--ink);
+      background: var(--ink);
+      color: var(--paper);
+      font-size: 8px;
+      font-weight: 720;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      transition: transform .2s var(--ease), background .2s, border-color .2s, color .2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .button svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    .button-secondary {
+      border-color: var(--line);
+      background: transparent;
+      color: var(--ink);
+    }
+
+    .button-secondary:hover { color: white; }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 51px;
+      color: var(--muted);
+      font-size: 8px;
+      font-weight: 680;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .hero-meta::before {
+      width: 28px;
+      height: 1px;
+      content: "";
+      background: var(--accent);
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 510px;
+    }
+
+    .hero-photo {
+      position: absolute;
+      inset: 0 3% 3% 4%;
+      overflow: hidden;
+      background: #a99f90;
+    }
+
+    .hero-photo::after {
+      position: absolute;
+      inset: 0;
+      content: "";
+      background: linear-gradient(90deg, #17171114, transparent 47%), linear-gradient(0deg, #1d1b1480, transparent 48%);
+    }
+
+    .hero-photo img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(.72);
+      opacity: 0;
+      transition: opacity 1.4s var(--ease), transform 8s linear;
+      transform: scale(1.035);
+    }
+
+    .hero-photo img.is-active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .hero-image-label {
+      position: absolute;
+      z-index: 1;
+      top: 20px;
+      right: 17px;
+      color: #fff;
+      font-size: 7px;
+      font-weight: 720;
+      letter-spacing: .2em;
+      writing-mode: vertical-rl;
+    }
+
+    .edition-stamp {
+      position: absolute;
+      z-index: 2;
+      top: 11%;
+      left: -3%;
+      width: 104px;
+      height: 104px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--paper);
+      border-radius: 50%;
+      background: var(--paper);
+      color: var(--accent-deep);
+      text-align: center;
+      transform: rotate(-9deg);
+    }
+
+    .edition-stamp strong {
+      display: block;
+      font-family: var(--serif);
+      font-size: 28px;
+      font-weight: 400;
+      letter-spacing: -.06em;
+      line-height: 1;
+    }
+
+    .edition-stamp span {
+      display: block;
+      margin-top: 5px;
+      font-size: 6px;
+      font-weight: 760;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .hero-caption {
+      position: absolute;
+      z-index: 2;
+      right: 0;
+      bottom: 0;
+      width: min(300px, 70%);
+      padding: 18px 20px;
+      background: var(--surface);
+    }
+
+    .hero-caption-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 7px;
+      color: var(--accent);
+      font-size: 7px;
+      font-weight: 740;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .hero-caption strong {
+      display: block;
+      font-family: var(--serif);
+      font-size: 21px;
+      font-weight: 400;
+      letter-spacing: -.02em;
+    }
+
+    .hero-caption p {
+      margin: 3px 0 0;
+      color: var(--muted);
+      font-size: 8px;
+      letter-spacing: .05em;
+    }
+
+    .hero-slide-controls {
+      position: absolute;
+      z-index: 3;
+      left: 0;
+      bottom: 1%;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hero-index {
+      color: var(--paper);
+      font-family: var(--serif);
+      font-size: 12px;
+      font-style: italic;
+    }
+
+    .slide-next {
+      width: 31px;
+      height: 31px;
+      display: grid;
+      place-items: center;
+      border: 1px solid #ffffff99;
+      border-radius: 50%;
+      background: #17171130;
+      color: #fff;
+      transition: background .2s, transform .2s;
+    }
+
+    .slide-next:hover {
+      transform: translateX(2px);
+      background: #17171190;
+    }
+
+    .slide-next svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    .search-row {
+      width: min(100% - 80px, 1480px);
+      min-height: 75px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .search-box {
+      position: relative;
+      width: min(100%, 290px);
+    }
+
+    .search-box svg {
+      position: absolute;
+      top: 11px;
+      left: 0;
+      width: 14px;
+      height: 14px;
+      color: var(--muted);
+    }
+
+    .search-box input {
+      width: 100%;
+      height: 36px;
+      padding: 0 10px 0 24px;
+      border: 0;
+      border-bottom: 1px solid var(--line);
+      border-radius: 0;
+      background: transparent;
+      color: var(--ink);
+      font-size: 9px;
+    }
+
+    .search-box input::placeholder { color: var(--muted); }
+
+    .search-status {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+    }
+
+    .section {
+      width: min(100% - 80px, 1480px);
+      margin: auto;
+      padding: 104px 0;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 35px;
+    }
+
+    .section-kicker {
+      margin-bottom: 12px;
+      color: var(--accent);
+      font-size: 8px;
+      font-weight: 750;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin-bottom: 0;
+      font-family: var(--serif);
+      font-size: clamp(42px, 5.6vw, 71px);
+      font-weight: 400;
+      letter-spacing: -.065em;
+      line-height: 1.02;
+    }
+
+    .section-note {
+      max-width: 335px;
+      margin: 0 0 5px;
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1.85;
+    }
+
+    .collection-grid {
+      display: grid;
+      grid-template-columns: 1.12fr .88fr;
+      grid-template-rows: 285px 230px;
+      gap: 15px;
+    }
+
+    .property-card {
+      position: relative;
+      min-width: 0;
+      overflow: hidden;
+      background: var(--paper-alt);
+    }
+
+    .property-card:first-child { grid-row: span 2; }
+
+    .property-card img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      filter: saturate(.72);
+      transition: transform .8s var(--ease), filter .5s;
+    }
+
+    .property-card:hover img {
+      transform: scale(1.035);
+      filter: saturate(.9);
+    }
+
+    .property-card::after {
+      position: absolute;
+      inset: 20% 0 0;
+      content: "";
+      background: linear-gradient(0deg, #161713c9, transparent);
+      pointer-events: none;
+    }
+
+    .property-label {
+      position: absolute;
+      z-index: 1;
+      top: 17px;
+      left: 18px;
+      padding: 7px 9px;
+      background: var(--paper);
+      color: var(--accent-deep);
+      font-size: 7px;
+      font-weight: 760;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .property-info {
+      position: absolute;
+      z-index: 1;
+      right: 22px;
+      bottom: 21px;
+      left: 22px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 14px;
+      color: #fff;
+    }
+
+    .property-info small {
+      display: block;
+      margin-bottom: 5px;
+      color: #e1d8ca;
+      font-size: 7px;
+      font-weight: 700;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+
+    .property-info h3 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(20px, 3vw, 32px);
+      font-weight: 400;
+      letter-spacing: -.03em;
+      line-height: 1.05;
+    }
+
+    .property-info p {
+      margin: 7px 0 0;
+      color: #ddd8cf;
+      font-size: 8px;
+      letter-spacing: .06em;
+    }
+
+    .card-open {
+      width: 37px;
+      height: 37px;
+      flex: 0 0 auto;
+      display: grid;
+      place-items: center;
+      border: 1px solid #ffffff99;
+      border-radius: 50%;
+      background: transparent;
+      color: #fff;
+      transition: background .2s, border-color .2s, transform .2s;
+    }
+
+    .card-open:hover {
+      transform: rotate(45deg);
+      border-color: var(--accent);
+      background: var(--accent);
+    }
+
+    .card-open svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    .collection-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding-top: 17px;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 7px;
+      font-weight: 680;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .collection-foot span:first-child { color: var(--accent); }
+
+    .story-section {
+      width: 100%;
+      padding: 90px max(40px, calc((100% - 1480px)/2));
+      background: var(--dark);
+      color: #f2efe8;
+    }
+
+    .story-section .section-head { align-items: flex-end; }
+    .story-section .section-kicker { color: #c6aa82; }
+    .story-section .section-note { color: var(--dark-muted); }
+
+    .story-layout {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 7%;
+    }
+
+    .story-image {
+      position: relative;
+      min-height: 430px;
+      overflow: hidden;
+      background: #5d5547;
+    }
+
+    .story-image img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(.63) brightness(.8);
+    }
+
+    .story-image::after {
+      position: absolute;
+      inset: 0;
+      content: "";
+      border: 1px solid #ffffff30;
+      pointer-events: none;
+    }
+
+    .story-image-mark {
+      position: absolute;
+      z-index: 1;
+      right: 17px;
+      bottom: 17px;
+      color: #fff;
+      font-size: 7px;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .story-copy { padding: 20px 2% 20px 0; }
+
+    .story-copy h2 {
+      max-width: 450px;
+      margin-bottom: 20px;
+    }
+
+    .story-copy > p:not(.section-kicker) {
+      max-width: 370px;
+      margin-bottom: 25px;
+      color: var(--dark-muted);
+      font-size: 11px;
+      line-height: 1.9;
+    }
+
+    .story-points {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 17px 20px;
+      margin: 28px 0 27px;
+    }
+
+    .story-point {
+      padding-top: 12px;
+      border-top: 1px solid #ffffff2a;
+    }
+
+    .story-point strong {
+      display: block;
+      color: #f2efe8;
+      font-family: var(--serif);
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    .story-point span {
+      display: block;
+      margin-top: 4px;
+      color: var(--dark-muted);
+      font-size: 7px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .story-copy .button {
+      border-color: #c6aa82;
+      background: #c6aa82;
+      color: #24231f;
+    }
+
+    .story-copy .button:hover {
+      border-color: #ead8bd;
+      background: #ead8bd;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .service-card {
+      min-height: 226px;
+      padding: 24px 21px 22px;
+      border-right: 1px solid var(--line);
+    }
+
+    .service-card:nth-child(3n) { border-right: 0; }
+
+    .service-card:nth-child(-n+3) {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .service-number {
+      color: var(--accent);
+      font-family: var(--serif);
+      font-size: 13px;
+      font-style: italic;
+    }
+
+    .service-card h3 {
+      margin: 31px 0 8px;
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: -.04em;
+    }
+
+    .service-card p {
+      margin: 0 0 15px;
+      color: var(--muted);
+      font-size: 9px;
+      line-height: 1.75;
+    }
+
+    .service-card button {
+      padding: 0;
+      border: 0;
+      border-bottom: 1px solid var(--accent);
+      background: transparent;
+      color: var(--accent-deep);
+      font-size: 7px;
+      font-weight: 760;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .service-card button:hover { color: var(--accent); }
+
+    .neighborhood { padding-top: 8px; }
+
+    .neighborhood-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      min-height: 445px;
+      background: var(--paper-alt);
+    }
+
+    .neighborhood-map {
+      position: relative;
+      min-height: 340px;
+      overflow: hidden;
+      background: #ded8cd;
+    }
+
+    .neighborhood-map::before,
+    .neighborhood-map::after {
+      position: absolute;
+      inset: 0;
+      content: "";
+    }
+
+    .neighborhood-map::before {
+      background:
+        linear-gradient(26deg, transparent 44%, #f8f5ee 44.4%, #f8f5ee 46%, transparent 46.4%),
+        linear-gradient(112deg, transparent 33%, #f8f5ee 33.4%, #f8f5ee 35%, transparent 35.4%),
+        linear-gradient(160deg, transparent 62%, #f8f5ee 62.4%, #f8f5ee 64%, transparent 64.4%),
+        linear-gradient(77deg, transparent 70%, #f8f5ee 70.4%, #f8f5ee 72%, transparent 72.4%);
+      opacity: .8;
+    }
+
+    .neighborhood-map::after {
+      background: radial-gradient(ellipse at 55% 48%, #927a5d26, transparent 58%);
+    }
+
+    .map-park {
+      position: absolute;
+      z-index: 1;
+      width: 115px;
+      height: 75px;
+      border-radius: 48% 52% 43% 57%;
+      background: #a9ad91;
+      opacity: .56;
+      transform: rotate(-18deg);
+    }
+
+    .map-park.one { top: 18%; left: 11%; }
+
+    .map-park.two {
+      right: 10%;
+      bottom: 14%;
+      width: 145px;
+      height: 70px;
+      transform: rotate(24deg);
+    }
+
+    .map-river {
+      position: absolute;
+      z-index: 1;
+      top: -20%;
+      left: 46%;
+      width: 47px;
+      height: 145%;
+      border-radius: 50%;
+      background: #b9c3c0;
+      opacity: .68;
+      transform: rotate(28deg);
+    }
+
+    .map-pin {
+      position: absolute;
+      z-index: 2;
+      top: 49%;
+      left: 53%;
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border: 1px solid #fff;
+      border-radius: 50% 50% 50% 0;
+      background: var(--accent-deep);
+      color: #fff;
+      transform: translate(-50%,-50%) rotate(-45deg);
+      box-shadow: 0 5px 16px #2c261b40;
+    }
+
+    .map-pin svg {
+      width: 15px;
+      height: 15px;
+      transform: rotate(45deg);
+    }
+
+    .map-street-label {
+      position: absolute;
+      z-index: 2;
+      color: #71695d;
+      font-size: 6px;
+      font-weight: 750;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .map-street-label.a {
+      top: 34%;
+      left: 17%;
+      transform: rotate(25deg);
+    }
+
+    .map-street-label.b {
+      right: 13%;
+      bottom: 31%;
+      transform: rotate(-18deg);
+    }
+
+    .neighborhood-copy {
+      padding: clamp(28px, 5vw, 65px);
+      align-self: center;
+    }
+
+    .neighborhood-copy h2 {
+      margin-bottom: 15px;
+      font-size: clamp(36px, 4.4vw, 55px);
+    }
+
+    .neighborhood-copy > p:not(.section-kicker) {
+      max-width: 395px;
+      margin-bottom: 22px;
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1.9;
+    }
+
+    .insight-list {
+      display: grid;
+      margin: 20px 0 22px;
+    }
+
+    .insight-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px 0;
+      border-top: 1px solid var(--line);
+      font-size: 8px;
+    }
+
+    .insight-row span { color: var(--muted); }
+
+    .insight-row strong {
+      font-family: var(--serif);
+      font-size: 15px;
+      font-weight: 400;
+    }
+
+    .insight-disclaimer {
+      display: block;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 7px;
+      line-height: 1.6;
+    }
+
+    .closing {
+      position: relative;
+      min-height: 360px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding: 62px max(40px, calc((100% - 1480px)/2));
+      background: var(--paper-alt);
+    }
+
+    .closing::after {
+      position: absolute;
+      top: -70%;
+      right: 7%;
+      width: 500px;
+      height: 500px;
+      border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 46px color-mix(in srgb, var(--accent) 12%, transparent),
+        0 0 0 92px color-mix(in srgb, var(--accent) 8%, transparent);
+      content: "";
+    }
+
+    .closing-copy {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+    }
+
+    .closing h2 {
+      margin-bottom: 15px;
+      font-size: clamp(43px, 6vw, 75px);
+    }
+
+    .closing-copy > p:not(.section-kicker) {
+      max-width: 440px;
+      margin-bottom: 23px;
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    .site-footer {
+      width: min(100% - 80px, 1480px);
+      min-height: 96px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      color: var(--muted);
+      font-size: 7px;
+      font-weight: 680;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .footer-brand {
+      color: var(--ink);
+      font-weight: 820;
+      letter-spacing: .18em;
+    }
+
+    .footer-socials {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .footer-socials a {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      color: var(--muted);
+      transition: color .2s, border-color .2s, transform .2s;
+    }
+
+    .footer-socials a:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .footer-socials svg {
+      width: 15px;
+      height: 15px;
+      fill: currentColor;
+    }
+
+    .overlay {
+      position: fixed;
+      z-index: 20;
+      inset: 0;
+      visibility: hidden;
+      background: #14140f80;
+      opacity: 0;
+      transition: opacity .3s, visibility .3s;
+    }
+
+    .overlay.open {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .drawer {
+      position: fixed;
+      z-index: 21;
+      inset: 0 0 0 auto;
+      width: min(490px, 100%);
+      display: flex;
+      flex-direction: column;
+      padding: 30px clamp(23px, 5vw, 48px);
+      background: var(--paper);
+      box-shadow: -25px 0 80px #18150e40;
+      transform: translateX(103%);
+      transition: transform .42s var(--ease);
+    }
+
+    .drawer.open { transform: translateX(0); }
+
+    .drawer-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 19px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .drawer-eyebrow {
+      color: var(--accent);
+      font-size: 7px;
+      font-weight: 750;
+      letter-spacing: .19em;
+      text-transform: uppercase;
+    }
+
+    .drawer-close {
+      width: 37px;
+      height: 37px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: transparent;
+      transition: transform .2s, border-color .2s;
+    }
+
+    .drawer-close:hover {
+      transform: rotate(90deg);
+      border-color: var(--accent);
+    }
+
+    .drawer-close svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    .drawer-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 39px 2px 25px 0;
+    }
+
+    .drawer-content h2 {
+      margin-bottom: 16px;
+      font-size: clamp(39px, 8vw, 57px);
+    }
+
+    .drawer-content p {
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1.9;
+    }
+
+    .drawer-content .panel-kicker {
+      margin-bottom: 10px;
+      color: var(--accent);
+      font-size: 7px;
+      font-weight: 760;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .drawer-feature {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 25px 0;
+    }
+
+    .drawer-feature div {
+      padding: 16px;
+      background: var(--paper-alt);
+    }
+
+    .drawer-feature strong {
+      display: block;
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    .drawer-feature span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 7px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .drawer-list {
+      display: grid;
+      margin: 23px 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .drawer-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 9px;
+      line-height: 1.7;
+    }
+
+    .drawer-list strong {
+      display: block;
+      margin-bottom: 2px;
+      color: var(--ink);
+      font-size: 9px;
+    }
+
+    .drawer-foot {
+      padding-top: 17px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 7px;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .menu-links {
+      display: grid;
+      margin-top: 19px;
+    }
+
+    .menu-links button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 0;
+      border: 0;
+      border-bottom: 1px solid var(--line);
+      background: transparent;
+      font-family: var(--serif);
+      font-size: 24px;
+      text-align: left;
+    }
+
+    .menu-links button span {
+      color: var(--accent);
+      font-family: var(--sans);
+      font-size: 12px;
+    }
+
+    .viewing-form {
+      display: grid;
+      gap: 14px;
+      margin-top: 23px;
+    }
+
+    .form-field {
+      display: grid;
+      gap: 6px;
+    }
+
+    .form-field label {
+      color: var(--muted);
+      font-size: 7px;
+      font-weight: 730;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .form-field input {
+      width: 100%;
+      min-height: 41px;
+      padding: 8px 10px;
+      border: 1px solid var(--line);
+      border-radius: 0;
+      background: var(--surface);
+      color: var(--ink);
+      font-size: 10px;
+    }
+
+    .form-field select,
+    .form-field textarea {
+      width: 100%;
+      min-height: 41px;
+      padding: 9px 10px;
+      border: 1px solid var(--line);
+      border-radius: 0;
+      background: var(--surface);
+      color: var(--ink);
+      font-size: 10px;
+    }
+
+    .form-field textarea {
+      min-height: 82px;
+      resize: vertical;
+    }
+
+    .form-field input[type="checkbox"] {
+      width: 14px;
+      min-height: 14px;
+      accent-color: var(--accent);
+    }
+
+    .form-check {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      color: var(--muted);
+      font-size: 8px;
+      line-height: 1.65;
+    }
+
+    .form-check input {
+      flex: 0 0 auto;
+      margin: 2px 0 0;
+      accent-color: var(--accent);
+    }
+
+    .form-notice {
+      padding: 12px;
+      border-left: 2px solid var(--accent);
+      background: var(--paper-alt);
+      color: var(--muted);
+      font-size: 8px !important;
+      line-height: 1.7 !important;
+    }
+
+    .auth-switch {
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 8px;
+    }
+
+    .auth-switch button {
+      padding: 0;
+      border: 0;
+      border-bottom: 1px solid var(--accent);
+      background: none;
+      color: var(--accent-deep);
+      font-size: inherit;
+    }
+
+    .form-message {
+      min-height: 18px;
+      margin: 0;
+      color: var(--accent-deep) !important;
+      font-size: 8px !important;
+    }
+
+    .preloader {
+      position: fixed;
+      z-index: 50;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      background: #252722;
+      color: #f2eee5;
+      transition: opacity .65s var(--ease), visibility .65s;
+    }
+
+    .preloader.done {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    .loader-lockup {
+      display: grid;
+      justify-items: center;
+      gap: 15px;
+    }
+
+    .loader-crest {
+      width: 62px;
+      height: 62px;
+      color: #d3bb99;
+      animation: seal-in 1.4s var(--ease) both, crest-turn 18s 1.4s linear infinite;
+    }
+
+    .loader-word {
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .25em;
+    }
+
+    .loader-word small {
+      display: block;
+      margin-top: 7px;
+      color: #c1baad;
+      font-size: 6px;
+      font-weight: 650;
+      letter-spacing: .22em;
+      text-align: center;
+    }
+
+    @keyframes seal-in {
+      from {
+        opacity: 0;
+        transform: scale(.82) rotate(-18deg);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+      }
+    }
+
+    @keyframes crest-turn {
+      to { rotate: 360deg; }
+    }
+
+    @media (max-width: 900px) {
+      .site-header,
+      .hero,
+      .search-row,
+      .section,
+      .site-footer {
+        width: min(100% - 48px, 1480px);
+      }
+
+      .header-nav { gap: 17px; }
+      .nav-link { font-size: 8px; }
+      .header-tools { margin-left: 19px; }
+
+      .hero {
+        min-height: 590px;
+        grid-template-columns: .8fr 1.2fr;
+        gap: 3%;
+      }
+
+      .hero-visual { min-height: 430px; }
+      .edition-stamp { width: 88px; height: 88px; }
+
+      .story-section {
+        padding-right: 24px;
+        padding-left: 24px;
+      }
+
+      .services-grid { grid-template-columns: 1fr 1fr; }
+
+      .service-card:nth-child(-n+3) { border-bottom: 0; }
+      .service-card:nth-child(2n) { border-right: 0; }
+
+      .service-card:nth-child(-n+2) {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .neighborhood-grid { grid-template-columns: .85fr 1.15fr; }
+
+      .closing {
+        padding-right: 24px;
+        padding-left: 24px;
+      }
+    }
+
+    @media (max-width: 660px) {
+      .site-header,
+      .hero,
+      .search-row,
+      .section,
+      .site-footer {
+        width: calc(100% - 40px);
+      }
+
+      .site-header { height: 72px; }
+      .brand-crest { width: 37px; height: 37px; }
+      .brand-lockup { font-size: 12px; }
+
+      .header-nav { display: none; }
+      .header-tools { margin-left: auto; }
+      .auth-link { display: none; }
+
+      .auth-cta {
+        min-height: 34px;
+        padding: 0 9px;
+        font-size: 7px;
+      }
+
+      .menu-toggle {
+        width: 38px;
+        height: 38px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 55px 0 35px;
+        grid-template-columns: 1fr;
+        gap: 34px;
+      }
+
+      .hero-copy { padding-left: 0; }
+
+      h1 { font-size: clamp(58px, 15vw, 83px); }
+
+      .hero-copy > p:not(.eyebrow) { font-size: 11px; }
+
+      .hero-meta { margin-top: 30px; }
+
+      .hero-visual {
+        min-height: min(110vw, 440px);
+        margin: 0 4px 8px 0;
+      }
+
+      .hero-photo { inset: 0 3% 3% 4%; }
+
+      .edition-stamp {
+        top: 8%;
+        left: -2%;
+      }
+
+      .hero-caption { width: min(270px, 76%); }
+
+      .search-row { min-height: 65px; }
+
+      .section { padding: 75px 0; }
+
+      .section-head {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 25px;
+      }
+
+      .section-note { max-width: 420px; }
+
+      .collection-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: minmax(370px, 100vw) 230px;
+        gap: 9px;
+      }
+
+      .property-card:first-child {
+        grid-column: 1 / -1;
+        grid-row: auto;
+      }
+
+      .property-info {
+        right: 13px;
+        bottom: 14px;
+        left: 13px;
+      }
+
+      .property-info h3 { font-size: 21px; }
+      .property-info p { font-size: 7px; }
+
+      .property-label {
+        top: 12px;
+        left: 12px;
+        font-size: 6px;
+      }
+
+      .card-open {
+        width: 32px;
+        height: 32px;
+      }
+
+      .collection-foot { font-size: 6px; }
+
+      .story-section { padding: 68px 20px; }
+
+      .story-layout {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .story-image { min-height: min(90vw, 390px); }
+      .story-copy { padding: 0; }
+      .story-points { gap: 14px; }
+
+      .services-grid { grid-template-columns: 1fr 1fr; }
+
+      .service-card {
+        min-height: 210px;
+        padding: 19px 13px;
+      }
+
+      .service-card h3 {
+        margin-top: 24px;
+        font-size: 20px;
+      }
+
+      .neighborhood { padding-top: 0; }
+
+      .neighborhood-grid { grid-template-columns: 1fr; }
+
+      .neighborhood-map { min-height: min(85vw, 340px); }
+
+      .neighborhood-copy { padding: 29px 22px; }
+
+      .closing {
+        min-height: 330px;
+        padding: 48px 20px;
+      }
+
+      .closing::after { right: -65%; }
+
+      .site-footer {
+        min-height: 90px;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 17px 0;
+        font-size: 6px;
+      }
+
+      .footer-socials {
+        order: 3;
+        width: 100%;
+      }
+
+      .drawer { padding-top: 22px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="preloader" id="preloader" aria-label="Loading NOVA333X property collection">
+    <div class="loader-lockup">
+      <svg class="loader-crest" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+        <path d="M32 5 54 17.5v29L32 59 10 46.5v-29L32 5Z" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M20 43V24l24 19V21" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="round"/>
+        <path d="M15 17h34M15 47h34" stroke="currentColor" stroke-opacity=".5"/>
+        <circle cx="32" cy="32" r="3" fill="currentColor"/>
+      </svg>
+      <div class="loader-word">NOVA333X<small>PRIVATE RESIDENCES · EST. 2026</small></div>
+    </div>
+  </div>
+
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="All Projects.html" aria-label="NOVA333X ALL PROJECTS home">
+        <span class="brand-crest" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none">
+            <path d="M20 3.5 34.5 11.8v16.4L20 36.5 5.5 28.2V11.8L20 3.5Z" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M13 27V15l14 12V13" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+            <circle cx="20" cy="20" r="2" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="brand-lockup">NOVA333X<small>PRIVATE RESIDENCES</small></span>
+      </a>
+
+      <nav class="header-nav" aria-label="Main navigation">
+        <button class="nav-link" type="button" data-panel="collection">The collection</button>
+        <button class="nav-link" type="button" data-panel="neighborhood">Neighborhood</button>
+        <button class="nav-link" type="button" data-panel="vision">Our perspective</button>
+      </nav>
+
+      <div class="header-tools">
+        <button class="auth-link" type="button" data-panel="signin">Sign in</button>
+        <button class="auth-cta" type="button" data-panel="signup">Sign up</button>
+
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme" title="Toggle light and dark theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/>
+          </svg>
+        </button>
+
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="heroTitle">
+        <div class="hero-copy">
+          <p class="eyebrow">A considered collection / Issue No. 01</p>
+          <h1>Spaces with<br>a <em>point of view.</em></h1>
+          <p>Exceptional homes are more than an address. They are a dialogue between architecture, landscape, and the lives unfolding within.</p>
+
+          <div class="hero-actions">
+            <button class="button" type="button" data-panel="collection">
+              Discover the collection
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path d="M3 10h13m-5-5 5 5-5 5"/>
+              </svg>
+            </button>
+
+            <button class="button button-secondary" type="button" data-panel="viewing">Request a private viewing</button>
+          </div>
+
+          <div class="hero-meta">Architecture · Place · Perspective</div>
+        </div>
+
+        <div class="hero-visual" aria-label="Modern luxury residence set in a lush landscaped setting">
+          <div class="hero-photo" id="heroSlideshow">
+
+            <!-- PHOTO 1: Xarici HTTPS link -->
+            <img
+              class="is-active"
+              src="https://images.squarespace-cdn.com/content/v1/5adb89f2aa49a19e7960b934/1722486370744-5TSA5BM5VPYVXVT7K20W/image-asset.jpeg?format=750w"
+              alt="Contemporary luxury residence framed by a landscaped garden"
+              data-title="The Stillwater House"
+              data-place="Bel Air · California · 6,420 sq ft"
+              data-caption="THE ARCHITECTURE OF ARRIVAL"
+              data-note="Nº 01 / A STUDY IN RESTRAINT"
+              fetchpriority="high"
+            >
+
+            <!-- PHOTO 2: Xarici HTTPS link -->
+            <img
+              src="https://framerusercontent.com/images/IYDlttMERox5YcBnl2GUpFwGs.jpg"
+              alt="A sculptural, sunlit residence with considered architectural details"
+              data-title="Casa Alba"
+              data-place="Palm Springs · California · 4,180 sq ft"
+              data-caption="LIGHT, FORM &amp; DESERT"
+              data-note="Nº 02 / DESERT MODERNISM"
+              aria-hidden="true"
+              loading="lazy"
+            >
+
+            <!-- PHOTO 3: Xarici HTTPS link -->
+            <img
+              src="https://static.wixstatic.com/media/97cd6d_c12caf15e2a149c7b0bb4f1c736b93d8~mv2.png/v1/fill/w_879%2Ch_828%2Cal_c%2Cq_90%2Cenc_avif%2Cquality_auto/97cd6d_c12caf15e2a149c7b0bb4f1c736b93d8~mv2.png"
+              alt="A warm modern residence opening onto a private garden"
+              data-title="The Cedar Residence"
+              data-place="Pacific Palisades · California · 5,060 sq ft"
+              data-caption="A QUIET MODERNISM"
+              data-note="Nº 03 / A GARDEN IN DIALOGUE"
+              aria-hidden="true"
+              loading="lazy"
+            >
+
+            <span class="hero-image-label" id="heroImageLabel">THE ARCHITECTURE OF ARRIVAL</span>
+          </div>
+
+          <div class="edition-stamp">
+            <div><strong>01—04</strong><span>selected<br>residences</span></div>
+          </div>
+
+          <div class="hero-caption">
+            <div class="hero-caption-top">
+              <span>Featured residence</span>
+              <span id="heroSlideCount">01 / 03</span>
+            </div>
+            <strong id="heroSlideTitle">The Stillwater House</strong>
+            <p id="heroSlidePlace">Bel Air · California · 6,420 sq ft</p>
+          </div>
+
+          <div class="hero-slide-controls">
+            <span class="hero-index" id="heroSlideNote">Nº 01 / A STUDY IN RESTRAINT</span>
+            <button class="slide-next" id="slideNext" type="button" aria-label="Show next residence">
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path d="M3 10h13m-5-5 5 5-5 5"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <div class="search-row">
+        <label class="search-box">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <circle cx="8.5" cy="8.5" r="5.5"/>
+            <path d="m13 13 4 4"/>
+          </svg>
+          <input id="propertySearch" type="search" maxlength="64" autocomplete="off" placeholder="Search residences, places, architecture" aria-label="Search the property collection">
+          <span class="search-status" id="searchStatus" aria-live="polite"></span>
+        </label>
+      </div>
+
+      <section class="section" id="collection" aria-labelledby="collectionTitle">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">The collection / 01</p>
+            <h2 id="collectionTitle">A study in singular places.</h2>
+          </div>
+          <p class="section-note">A small, considered selection of residences where material, light, and landscape find their own quiet balance.</p>
+        </div>
+
+        <div class="collection-grid">
+
+          <article class="property-card" data-searchable="stillwater house bel air california modern architecture garden estate residence">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/5adb89f2aa49a19e7960b934/1722486370744-5TSA5BM5VPYVXVT7K20W/image-asset.jpeg?format=750w"
+              alt="The Stillwater House, contemporary estate in California"
+              loading="lazy"
+            >
+            <span class="property-label">The signature residence</span>
+            <div class="property-info">
+              <div>
+                <small>Bel Air · California</small>
+                <h3>The Stillwater House</h3>
+                <p>6 beds · 7 baths · 6,420 sq ft</p>
+              </div>
+              <button class="card-open" type="button" data-panel="estate" aria-label="Explore The Stillwater House">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M4 16 16 4M6 4h10v10"/>
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="property-card" data-searchable="casa alba palm springs desert courtyard limestone retreat">
+            <img
+              src="https://framerusercontent.com/images/IYDlttMERox5YcBnl2GUpFwGs.jpg"
+              alt="Sunlit modern interior with sculptural architectural details"
+              loading="lazy"
+            >
+            <span class="property-label">New perspective</span>
+            <div class="property-info">
+              <div>
+                <small>Palm Springs · California</small>
+                <h3>Casa Alba</h3>
+                <p>4 beds · 5 baths · 4,180 sq ft</p>
+              </div>
+              <button class="card-open" type="button" data-panel="estate" aria-label="Explore Casa Alba">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M4 16 16 4M6 4h10v10"/>
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="property-card" data-searchable="the cedar residence pacific palisades quiet modern wood garden">
+            <img
+              src="https://static.wixstatic.com/media/97cd6d_c12caf15e2a149c7b0bb4f1c736b93d8~mv2.png/v1/fill/w_879%2Ch_828%2Cal_c%2Cq_90%2Cenc_avif%2Cquality_auto/97cd6d_c12caf15e2a149c7b0bb4f1c736b93d8~mv2.png"
+              alt="Warm, restrained residential interior opening to the landscape"
+              loading="lazy"
+            >
+            <span class="property-label">Quiet modernism</span>
+            <div class="property-info">
+              <div>
+                <small>Pacific Palisades · California</small>
+                <h3>The Cedar Residence</h3>
+                <p>5 beds · 6 baths · 5,060 sq ft</p>
+              </div>
+              <button class="card-open" type="button" data-panel="estate" aria-label="Explore The Cedar Residence">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M4 16 16 4M6 4h10v10"/>
+                </svg>
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="collection-foot">
+          <span>Three homes. Three distinct points of view.</span>
+          <span>Representative showcase details · Inquire for availability</span>
+        </div>
+      </section>
+
+      <section class="story-section" aria-labelledby="storyTitle">
+        <div class="story-layout">
+          <div class="story-image">
+            <img
+              src="https://static.wixstatic.com/media/97cd6d_c12caf15e2a149c7b0bb4f1c736b93d8~mv2.png/v1/fill/w_879%2Ch_828%2Cal_c%2Cq_90%2Cenc_avif%2Cquality_auto/97cd6d_c12caf15e2a149c7b0bb4f1c736b93d8~mv2.png"
+              alt="Sculptural, light-filled residential interior"
+              loading="lazy"
+            >
+            <span class="story-image-mark">Light / Material / Form</span>
+          </div>
+
+          <div class="story-copy">
+            <p class="section-kicker">An architecture of feeling / 02</p>
+            <h2 id="storyTitle">A home is a way of seeing.</h2>
+            <p>We look beyond the expected checklist to find a rare sense of fit: the way the morning enters a room, the texture of a threshold, and the calm of a well-made plan.</p>
+
+            <div class="story-points">
+              <div class="story-point">
+                <strong>Considered form</strong>
+                <span>Architecture with intention</span>
+              </div>
+              <div class="story-point">
+                <strong>Natural character</strong>
+                <span>Materials that age well</span>
+              </div>
+              <div class="story-point">
+                <strong>Sense of place</strong>
+                <span>Connected to its setting</span>
+              </div>
+              <div class="story-point">
+                <strong>Quiet distinction</strong>
+                <span>Details worth discovering</span>
+              </div>
+            </div>
+
+            <button class="button" type="button" data-panel="vision">
+              Our point of view
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path d="M3 10h13m-5-5 5 5-5 5"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="servicesTitle">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">The experience / 03</p>
+            <h2 id="servicesTitle">A more personal approach.</h2>
+          </div>
+          <p class="section-note">From first discovery to a considered visit, each step is shaped around your priorities and your time.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <span class="service-number">01</span>
+            <h3>Private viewings</h3>
+            <p>Arrange a discreet visit, paced around the home and your questions.</p>
+            <button type="button" data-panel="viewing">Request a viewing →</button>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">02</span>
+            <h3>Virtual tours</h3>
+            <p>Experience the flow, volumes, and architectural details from anywhere.</p>
+            <button type="button" data-panel="tour">Enter the tour room →</button>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">03</span>
+            <h3>Estate details</h3>
+            <p>Review the specifications, material palette, and considered amenities.</p>
+            <button type="button" data-panel="estate">Explore specifications →</button>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">04</span>
+            <h3>Place insights</h3>
+            <p>Get a measured perspective on the neighborhood and its character.</p>
+            <button type="button" data-panel="neighborhood">Discover the area →</button>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">05</span>
+            <h3>Acquisition &amp; services</h3>
+            <p>Outline a purchase inquiry or request a tailored property service.</p>
+            <button type="button" data-panel="acquisition">Start an acquisition order →</button>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">06</span>
+            <h3>Registration &amp; title</h3>
+            <p>Prepare a local preview for title verification and compliance review.</p>
+            <button type="button" data-panel="registration">Open registration forms →</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="section neighborhood" aria-labelledby="neighborhoodTitle">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Beyond the threshold / 04</p>
+            <h2 id="neighborhoodTitle">A place with its own rhythm.</h2>
+          </div>
+          <p class="section-note">A property is also its morning walk, its nearest table, and the landscape just beyond the garden wall.</p>
+        </div>
+
+        <div class="neighborhood-grid">
+          <div class="neighborhood-map" role="img" aria-label="Illustrative map of the Bel Air neighborhood">
+            <span class="map-park one"></span>
+            <span class="map-park two"></span>
+            <span class="map-river"></span>
+            <span class="map-street-label a">Stone Canyon Road</span>
+            <span class="map-street-label b">Sunset Boulevard</span>
+            <span class="map-pin" aria-hidden="true">
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M10 18s6-5.3 6-10a6 6 0 1 0-12 0c0 4.7 6 10 6 10Z"/>
+                <circle cx="10" cy="8" r="2"/>
+              </svg>
+            </span>
+          </div>
+
+          <div class="neighborhood-copy">
+            <p class="section-kicker">Bel Air · Los Angeles</p>
+            <h2>A little removed.<br>Close to everything.</h2>
+            <p>Private lanes, hillside gardens, and a quiet residential character shape this storied pocket of Los Angeles. A considered location balances retreat with connection.</p>
+
+            <div class="insight-list">
+              <div class="insight-row">
+                <span>Setting</span>
+                <strong>Hillside enclave</strong>
+              </div>
+              <div class="insight-row">
+                <span>Character</span>
+                <strong>Garden residences</strong>
+              </div>
+              <div class="insight-row">
+                <span>Perspective</span>
+                <strong>Illustrative overview</strong>
+              </div>
+            </div>
+
+            <button class="button button-secondary" type="button" data-panel="neighborhood">
+              Neighborhood insights
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path d="M3 10h13m-5-5 5 5-5 5"/>
+              </svg>
+            </button>
+
+            <small class="insight-disclaimer">Map and neighborhood information are illustrative and provided as a design showcase, not a location or investment representation.</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing">
+        <div class="closing-copy">
+          <p class="section-kicker">An invitation / NOVA333X</p>
+          <h2>Find the place that feels like yours.</h2>
+          <p>Begin a thoughtful conversation about the collection, the architecture, and the details that matter to you.</p>
+
+          <button class="button" type="button" data-panel="viewing">
+            Begin a private conversation
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M3 10h13m-5-5 5 5-5 5"/>
+            </svg>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span class="footer-brand">NOVA333X</span>
+      <span>Architecture · Place · Perspective</span>
+
+      <nav class="footer-socials" aria-label="Social profiles">
+        <a href="https://www.upwork.com" target="_blank" rel="noopener noreferrer" aria-label="Upwork profile" title="Upwork">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M17.3 7.1c-1.95 0-3.42 1.22-4.18 3.12-.78-1.16-1.38-2.45-1.75-3.9H8.55v5.02c0 1.08-.88 1.96-1.96 1.96s-1.96-.88-1.96-1.96V6.32H1.95v5.02a4.64 4.64 0 0 0 8.98 1.62c.6.82 1.28 1.58 2.06 2.22l-1.4 6.5h2.75l1.07-4.95c.59.19 1.2.29 1.83.29 2.74 0 4.82-2.03 4.82-4.83 0-2.92-2.04-5.09-4.76-5.09Zm-.02 7.5c-.56 0-1.1-.14-1.62-.42l.48-2.23c.33-1.53.85-2.34 1.68-2.34.95 0 1.58 1 1.58 2.5 0 1.5-.83 2.49-2.12 2.49Z"/>
+          </svg>
+        </a>
+
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" title="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5.2 3.4a2.1 2.1 0 1 1 0 4.2 2.1 2.1 0 0 1 0-4.2ZM3.4 9h3.7v11.6H3.4V9Zm5.9 0h3.5v1.6h.05A3.85 3.85 0 0 1 16.3 8.7c3.8 0 4.5 2.5 4.5 5.7v6.2h-3.7v-5.5c0-1.3-.02-3-1.85-3-1.85 0-2.13 1.45-2.13 2.9v5.6H9.3V9Z"/>
+          </svg>
+        </a>
+
+        <a href="https://github.com/yusufiexweb" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" title="GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 .9a11.2 11.2 0 0 0-3.54 21.83c.56.1.76-.24.76-.54v-2.1c-3.1.68-3.76-1.32-3.76-1.32-.5-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 .1.76.09 2.45 1.56.9.15 1.85-.1 2.45-.37.1-.72.4-1.2.72-1.48-2.48-.28-5.08-1.24-5.08-5.52 0-1.22.44-2.22.1-2.97 0 0 .95-.3 3.08 1.15a10.7 10.7 0 0 1 5.6 0c2.13-1.45 3.08-1.15 3.08-1.15.6 1.54.22 2.69.1 2.97.72.78 1.16 1.78 1.16 3 0 4.3-2.6 5.23-5.1 5.5.4.35.76 1.03.76 2.08v3.08c0 .3.2.65.77.54A11.2 11.2 0 0 0 12 .9Z"/>
+          </svg>
+        </a>
+      </nav>
+
+      <span>© 2026 / Private residences</span>
+    </footer>
+  </div>
+
+  <div class="overlay" id="overlay" aria-hidden="true"></div>
+
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" aria-hidden="true">
+    <div class="drawer-top">
+      <span class="drawer-eyebrow">NOVA333X / Private residences</span>
+      <button class="drawer-close" id="drawerClose" type="button" aria-label="Close panel">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+          <path d="m5 5 10 10M15 5 5 15"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="drawer-content" id="drawerContent"></div>
+    <div class="drawer-foot">NOVA333X / Considered by design</div>
+  </aside>
+
+  <template id="panel-collection">
+    <p class="panel-kicker">The collection / selected residences</p>
+    <h2 id="drawerTitle">Distinctive<br>by nature.</h2>
+    <p>Each residence is chosen for the integrity of its architecture, its relationship to place, and the feeling that it leaves with you.</p>
+
+    <div class="drawer-feature">
+      <div><strong>01—04</strong><span>Selected residences</span></div>
+      <div><strong>01 of 01</strong><span>Current edition</span></div>
+    </div>
+
+    <ul class="drawer-list">
+      <li><strong>The Stillwater House / Bel Air</strong>Modern hillside architecture, a layered garden, and generous entertaining spaces.</li>
+      <li><strong>Casa Alba / Palm Springs</strong>A sunlit retreat shaped by desert tones and indoor-outdoor living.</li>
+      <li><strong>The Cedar Residence / Pacific Palisades</strong>Quiet modernism, warm materiality, and a private garden setting.</li>
+    </ul>
+  </template>
+
+  <template id="panel-estate">
+    <p class="panel-kicker">Exclusive estate specifications / 01</p>
+    <h2 id="drawerTitle">The Stillwater<br>House.</h2>
+    <p>A representative property profile for this visual showcase. Specifications below are illustrative and should not be relied on as an offer, listing, or verified property disclosure.</p>
+
+    <div class="drawer-feature">
+      <div><strong>6,420</strong><span>Interior sq ft · illustrative</span></div>
+      <div><strong>6 / 7</strong><span>Bedrooms / baths · illustrative</span></div>
+    </div>
+
+    <ul class="drawer-list">
+      <li><strong>Architecture</strong>Contemporary composition with strong indoor-outdoor connections.</li>
+      <li><strong>Materials</strong>Natural stone, warm timber, and restrained metal detailing.</li>
+      <li><strong>Landscape</strong>Layered garden spaces conceived as an extension of the home.</li>
+      <li><strong>Availability</strong>Illustrative design concept; no active listing or offer is implied.</li>
+    </ul>
+
+    <button class="button" type="button" data-panel="viewing">
+      Ask about a private viewing
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <path d="M3 10h13m-5-5 5 5-5 5"/>
+      </svg>
+    </button>
+  </template>
+
+  <template id="panel-tour">
+    <p class="panel-kicker">Virtual architectural tours / tour room</p>
+    <h2 id="drawerTitle">See the space<br>take shape.</h2>
+    <p>Explore a narrated, room-by-room view designed to reveal scale, circulation, material, and the changing quality of light.</p>
+
+    <div class="drawer-feature">
+      <div><strong>01 / Arrival</strong><span>Approach and threshold</span></div>
+      <div><strong>02 / Living</strong><span>Volume and connection</span></div>
+    </div>
+
+    <ul class="drawer-list">
+      <li><strong>The gallery / 04:20</strong>A first impression of the residence and its architectural language.</li>
+      <li><strong>The living rooms / 06:10</strong>Daylight, views, and the relationship between gathering spaces.</li>
+      <li><strong>The garden / 03:40</strong>A considered transition from interior life to landscape.</li>
+    </ul>
+
+    <p>Virtual tour modules are presented as an informational concept. No external player or tracking service is connected.</p>
+  </template>
+
+  <template id="panel-neighborhood">
+    <p class="panel-kicker">Neighborhood insights / Bel Air</p>
+    <h2 id="drawerTitle">A quieter side<br>of Los Angeles.</h2>
+    <p>Hillside roads, mature gardens, and a distinctly residential pace give Bel Air its character—while the city remains within reach.</p>
+
+    <div class="drawer-feature">
+      <div><strong>Hillside</strong><span>Setting and outlook</span></div>
+      <div><strong>Residential</strong><span>Neighborhood character</span></div>
+    </div>
+
+    <ul class="drawer-list">
+      <li><strong>Landscape</strong>Established planting and a sense of retreat from the city.</li>
+      <li><strong>Architecture</strong>A varied collection of residences set into the hillside.</li>
+      <li><strong>Getting around</strong>Travel times and access vary with route and conditions; confirm locally.</li>
+    </ul>
+
+    <p>Neighborhood details are illustrative only and are not investment guidance, a valuation, or a representation of local conditions.</p>
+  </template>
+
+  <template id="panel-vision">
+    <p class="panel-kicker">Our perspective / NOVA333X</p>
+    <h2 id="drawerTitle">Less noise.<br>More meaning.</h2>
+    <p>We believe the best homes do not announce themselves. They make their case through proportion, material, light, and a genuine sense of belonging to their setting.</p>
+
+    <ul class="drawer-list">
+      <li><strong>Architecture first</strong>We look for clarity of thought and quality of execution.</li>
+      <li><strong>Place matters</strong>The landscape and neighborhood are part of the home.</li>
+      <li><strong>Personal, not performative</strong>We focus on the details that matter to the person who will live there.</li>
+    </ul>
+  </template>
+
+  <template id="panel-viewing">
+    <p class="panel-kicker">Private viewing / personal inquiry</p>
+    <h2 id="drawerTitle">An introduction,<br>on your terms.</h2>
+    <p>Share a preferred name and email to prepare a local inquiry preview. This standalone showcase does not transmit or store your information.</p>
+
+    <form class="viewing-form" id="viewingForm" novalidate>
+      <div class="form-field">
+        <label for="visitorName">Preferred name</label>
+        <input id="visitorName" name="name" type="text" maxlength="80" autocomplete="name" required>
+      </div>
+
+      <div class="form-field">
+        <label for="visitorEmail">Email address</label>
+        <input id="visitorEmail" name="email" type="email" maxlength="254" autocomplete="email" required>
+      </div>
+
+      <div class="form-field">
+        <label for="viewingInterest">Residence of interest</label>
+        <input id="viewingInterest" name="interest" type="text" maxlength="80" value="The Stillwater House">
+      </div>
+
+      <button class="button" type="submit">
+        Prepare inquiry preview
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M3 10h13m-5-5 5 5-5 5"/>
+        </svg>
+      </button>
+
+      <p class="form-message" id="formMessage" aria-live="polite"></p>
+    </form>
+  </template>
+
+  <template id="panel-signin">
+    <p class="panel-kicker">Private client access / sign in</p>
+    <h2 id="drawerTitle">Welcome<br>back.</h2>
+    <p>This is a front-end access demonstration only. No account is created, authenticated, or connected to a service.</p>
+
+    <form class="viewing-form" data-demo-form="signin" novalidate>
+      <div class="form-field">
+        <label for="signInEmail">Email address</label>
+        <input id="signInEmail" name="email" type="email" maxlength="254" autocomplete="email" required>
+      </div>
+
+      <div class="form-field">
+        <label for="signInPassword">Password</label>
+        <input id="signInPassword" name="password" type="password" minlength="8" maxlength="128" autocomplete="current-password" required>
+      </div>
+
+      <button class="button" type="submit">
+        Continue to access
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M3 10h13m-5-5 5 5-5 5"/>
+        </svg>
+      </button>
+
+      <p class="form-message" data-form-message aria-live="polite"></p>
+      <p class="auth-switch">New to NOVA333X? <button type="button" data-panel="signup">Create an account</button></p>
+    </form>
+  </template>
+
+  <template id="panel-signup">
+    <p class="panel-kicker">Private client access / create account</p>
+    <h2 id="drawerTitle">A more personal<br>perspective.</h2>
+    <p>Set up a sample client profile interface. This prototype does not create an account or send or store information.</p>
+
+    <form class="viewing-form" data-demo-form="signup" novalidate>
+      <div class="form-field">
+        <label for="signUpName">Preferred name</label>
+        <input id="signUpName" name="name" type="text" maxlength="80" autocomplete="name" required>
+      </div>
+
+      <div class="form-field">
+        <label for="signUpEmail">Email address</label>
+        <input id="signUpEmail" name="email" type="email" maxlength="254" autocomplete="email" required>
+      </div>
+
+      <div class="form-field">
+        <label for="signUpPassword">Create password · 8 characters minimum</label>
+        <input id="signUpPassword" name="password" type="password" minlength="8" maxlength="128" autocomplete="new-password" required>
+      </div>
+
+      <label class="form-check">
+        <input name="agreement" type="checkbox" required>
+        <span>I understand this is a local design preview, not a live account service.</span>
+      </label>
+
+      <button class="button" type="submit">
+        Preview account setup
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M3 10h13m-5-5 5 5-5 5"/>
+        </svg>
+      </button>
+
+      <p class="form-message" data-form-message aria-live="polite"></p>
+      <p class="auth-switch">Already have access? <button type="button" data-panel="signin">Sign in</button></p>
+    </form>
+  </template>
+
+  <template id="panel-acquisition">
+    <p class="panel-kicker">Property acquisition / service order</p>
+    <h2 id="drawerTitle">Begin with<br>what matters.</h2>
+    <p>Prepare a local purchase, viewing, or property-service inquiry. The form is a showcase only; no order is submitted, booked, or saved.</p>
+
+    <form class="viewing-form" data-demo-form="acquisition" novalidate>
+      <div class="form-field">
+        <label for="orderType">I'm interested in</label>
+        <select id="orderType" name="request" required>
+          <option value="">Choose an inquiry</option>
+          <option>Property acquisition consultation</option>
+          <option>Private viewing appointment</option>
+          <option>Property advisory service</option>
+          <option>Investor introduction</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="orderProperty">Residence</label>
+        <select id="orderProperty" name="property" required>
+          <option value="">Choose a residence</option>
+          <option>The Stillwater House · Bel Air</option>
+          <option>Casa Alba · Palm Springs</option>
+          <option>The Cedar Residence · Pacific Palisades</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="orderName">Preferred name</label>
+        <input id="orderName" name="name" type="text" maxlength="80" autocomplete="name" required>
+      </div>
+
+      <div class="form-field">
+        <label for="orderEmail">Email address</label>
+        <input id="orderEmail" name="email" type="email" maxlength="254" autocomplete="email" required>
+      </div>
+
+      <div class="form-field">
+        <label for="orderTiming">Preferred timing</label>
+        <input id="orderTiming" name="timing" type="date">
+      </div>
+
+      <div class="form-field">
+        <label for="orderNotes">Additional context · optional</label>
+        <textarea id="orderNotes" name="notes" maxlength="500" placeholder="Share preferences or questions. Do not include financial or identity details."></textarea>
+      </div>
+
+      <button class="button" type="submit">
+        Prepare order preview
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M3 10h13m-5-5 5 5-5 5"/>
+        </svg>
+      </button>
+
+      <p class="form-message" data-form-message aria-live="polite"></p>
+    </form>
+  </template>
+
+  <template id="panel-registration">
+    <p class="panel-kicker">Property records / registration &amp; compliance</p>
+    <h2 id="drawerTitle">Prepare the<br>record request.</h2>
+    <p>Use this structured prototype to preview a property-registration, title-deed verification, or regulatory-compliance request. It is not an official filing or verification service; submit real records only through the relevant government authority or licensed professional.</p>
+
+    <p class="form-notice">Do not enter sensitive personal numbers or attach original identity documents. This page does not transmit or store form contents.</p>
+
+    <form class="viewing-form" data-demo-form="registration" novalidate>
+      <div class="form-field">
+        <label for="recordType">Request type</label>
+        <select id="recordType" name="request" required>
+          <option value="">Select a record service</option>
+          <option>Property registration preparation</option>
+          <option>Title deed / ownership verification</option>
+          <option>Regulatory compliance review</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="recordAddress">Property address</label>
+        <input id="recordAddress" name="address" type="text" maxlength="180" autocomplete="street-address" required>
+      </div>
+
+      <div class="form-field">
+        <label for="recordJurisdiction">Jurisdiction / registry</label>
+        <input id="recordJurisdiction" name="jurisdiction" type="text" maxlength="100" required>
+      </div>
+
+      <div class="form-field">
+        <label for="recordParcel">Parcel or public record reference</label>
+        <input id="recordParcel" name="parcel" type="text" maxlength="100" required>
+      </div>
+
+      <div class="form-field">
+        <label for="recordEmail">Contact email</label>
+        <input id="recordEmail" name="email" type="email" maxlength="254" autocomplete="email" required>
+      </div>
+
+      <label class="form-check">
+        <input name="authority" type="checkbox" required>
+        <span>I am authorized to request information about this property and understand this preview is not an official legal submission.</span>
+      </label>
+
+      <button class="button" type="submit">
+        Preview records request
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M3 10h13m-5-5 5 5-5 5"/>
+        </svg>
+      </button>
+
+      <p class="form-message" data-form-message aria-live="polite"></p>
+    </form>
+  </template>
+
+  <template id="panel-menu">
+    <p class="panel-kicker">Navigate / NOVA333X</p>
+    <h2 id="drawerTitle">A closer<br>look around.</h2>
+
+    <div class="menu-links">
+      <button type="button" data-panel="collection">The collection <span>↗</span></button>
+      <button type="button" data-panel="estate">Estate specifications <span>↗</span></button>
+      <button type="button" data-panel="tour">Virtual architecture tours <span>↗</span></button>
+      <button type="button" data-panel="neighborhood">Neighborhood insights <span>↗</span></button>
+      <button type="button" data-panel="viewing">Private viewing inquiry <span>↗</span></button>
+      <button type="button" data-panel="acquisition">Acquisition &amp; services <span>↗</span></button>
+      <button type="button" data-panel="registration">Title &amp; compliance forms <span>↗</span></button>
+      <button type="button" data-panel="signin">Sign in / client access <span>↗</span></button>
+      <button type="button" data-panel="signup">Create an account <span>↗</span></button>
+    </div>
+  </template>
+
+  <script>
+    (() => {
+      "use strict";
+
+      const root = document.documentElement;
+      const preloader = document.getElementById("preloader");
+      const drawer = document.getElementById("drawer");
+      const overlay = document.getElementById("overlay");
+      const drawerContent = document.getElementById("drawerContent");
+      const menuToggle = document.getElementById("menuToggle");
+      const drawerClose = document.getElementById("drawerClose");
+      const themeToggle = document.getElementById("themeToggle");
+      const propertySearch = document.getElementById("propertySearch");
+      const searchStatus = document.getElementById("searchStatus");
+
+      const heroSlides = Array.from(document.querySelectorAll("#heroSlideshow img"));
+      const slideTitle = document.getElementById("heroSlideTitle");
+      const slidePlace = document.getElementById("heroSlidePlace");
+      const slideCount = document.getElementById("heroSlideCount");
+      const slideCaption = document.getElementById("heroImageLabel");
+      const slideNote = document.getElementById("heroSlideNote");
+      const slideNext = document.getElementById("slideNext");
+
+      let activeSlide = 0;
+      let activePanel = "";
+      let lastFocus = null;
+
+      window.setTimeout(() => preloader.classList.add("done"), 520);
+
+      function showSlide(index) {
+        activeSlide = (index + heroSlides.length) % heroSlides.length;
+        const slide = heroSlides[activeSlide];
+
+        heroSlides.forEach((image, imageIndex) => {
+          const isActive = imageIndex === activeSlide;
+          image.classList.toggle("is-active", isActive);
+          image.setAttribute("aria-hidden", String(!isActive));
+        });
+
+        slideTitle.textContent = slide.dataset.title;
+        slidePlace.textContent = slide.dataset.place;
+        slideCaption.textContent = slide.dataset.caption;
+        slideNote.textContent = slide.dataset.note;
+
+        slideCount.textContent =
+          String(activeSlide + 1).padStart(2, "0") +
+          " / " +
+          String(heroSlides.length).padStart(2, "0");
+      }
+
+      slideNext.addEventListener("click", () => showSlide(activeSlide + 1));
+
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        window.setInterval(() => {
+          if (
+            document.visibilityState === "visible" &&
+            !drawer.classList.contains("open")
+          ) {
+            showSlide(activeSlide + 1);
+          }
+        }, 7200);
+      }
+
+      function closeDrawer() {
+        drawer.classList.remove("open");
+        overlay.classList.remove("open");
+        drawer.setAttribute("aria-hidden", "true");
+        overlay.setAttribute("aria-hidden", "true");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open menu");
+        document.body.style.overflow = "";
+        activePanel = "";
+
+        if (lastFocus && typeof lastFocus.focus === "function") {
+          lastFocus.focus();
+        }
+      }
+
+      function openDrawer(panel) {
+        const wasOpen = drawer.classList.contains("open");
+        const template = document.getElementById("panel-" + panel);
+
+        if (!template) return;
+
+        if (!wasOpen) lastFocus = document.activeElement;
+
+        drawerContent.replaceChildren();
+        drawerContent.append(template.content.cloneNode(true));
+
+        drawer.classList.add("open");
+        overlay.classList.add("open");
+
+        drawer.setAttribute("aria-hidden", "false");
+        overlay.setAttribute("aria-hidden", "false");
+
+        menuToggle.setAttribute("aria-expanded", String(panel === "menu"));
+        menuToggle.setAttribute("aria-label", panel === "menu" ? "Close menu" : "Open menu");
+
+        document.body.style.overflow = "hidden";
+        activePanel = panel;
+
+        drawerClose.focus();
+        bindInquiryForm();
+      }
+
+      document.addEventListener("click", event => {
+        const trigger = event.target.closest("[data-panel]");
+        if (!trigger) return;
+
+        event.preventDefault();
+        openDrawer(trigger.dataset.panel);
+      });
+
+      menuToggle.addEventListener("click", () => {
+        if (
+          drawer.classList.contains("open") &&
+          activePanel === "menu"
+        ) {
+          closeDrawer();
+        } else {
+          openDrawer("menu");
+        }
+      });
+
+      drawerClose.addEventListener("click", closeDrawer);
+      overlay.addEventListener("click", closeDrawer);
+
+      document.addEventListener("keydown", event => {
+        if (event.key === "Escape" && drawer.classList.contains("open")) {
+          closeDrawer();
+        }
+
+        if (event.key !== "Tab" || !drawer.classList.contains("open")) return;
+
+        const focusable = drawer.querySelectorAll(
+          "button:not([disabled]), input:not([disabled]), [href], [tabindex]:not([tabindex='-1'])"
+        );
+
+        if (!focusable.length) return;
+
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      });
+
+      themeToggle.addEventListener("click", () => {
+        const next = root.dataset.theme === "light" ? "dark" : "light";
+
+        root.dataset.theme = next;
+
+        themeToggle.setAttribute(
+          "aria-label",
+          "Switch to " + (next === "light" ? "dark" : "light") + " theme"
+        );
+
+        document
+          .querySelector('meta[name="theme-color"]')
+          .setAttribute("content", next === "dark" ? "#191a17" : "#f4f1eb");
+      });
+
+      function sanitizeUserInput(value, limit) {
+        return value
+          .replace(/[<>]/g, "")
+          .replace(/[\u0000-\u001f\u007f]/g, "")
+          .slice(0, limit)
+          .trim();
+      }
+
+      const cards = Array.from(document.querySelectorAll(".property-card"));
+
+      propertySearch.addEventListener("input", () => {
+        const query = sanitizeUserInput(propertySearch.value, 64).toLocaleLowerCase();
+        let visible = 0;
+
+        cards.forEach(card => {
+          const searchable = (
+            card.dataset.searchable + " " + card.textContent
+          ).toLocaleLowerCase();
+
+          const matches = !query || searchable.includes(query);
+
+          card.hidden = !matches;
+
+          if (matches) visible += 1;
+        });
+
+        searchStatus.textContent = query
+          ? visible + (visible === 1 ? " residence" : " residences")
+          : "";
+      });
+
+      function bindInquiryForm() {
+        const form = drawerContent.querySelector("#viewingForm");
+        const message = drawerContent.querySelector("#formMessage");
+
+        if (!form || !message) return;
+
+        form.addEventListener("submit", event => {
+          event.preventDefault();
+
+          const nameInput = form.elements.namedItem("name");
+          const emailInput = form.elements.namedItem("email");
+          const interestInput = form.elements.namedItem("interest");
+
+          const name = sanitizeUserInput(nameInput.value, 80);
+          const email = sanitizeUserInput(emailInput.value, 254);
+          const interest = sanitizeUserInput(interestInput.value, 80);
+
+          const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+          if (!name || !emailValid || !interest) {
+            message.textContent =
+              "Enter a name, a valid email address, and a residence of interest.";
+            return;
+          }
+
+          message.textContent =
+            "Inquiry preview ready for " + name + " | " + interest +
+            ". Nothing was sent or saved.";
+        });
+      }
+
+      drawerContent.addEventListener("submit", event => {
+        const form = event.target.closest("[data-demo-form]");
+        if (!form) return;
+
+        event.preventDefault();
+
+        const message = form.querySelector("[data-form-message]");
+        if (!message) return;
+
+        const missing = Array.from(form.querySelectorAll("[required]")).some(field => {
+          if (field.type === "checkbox") return !field.checked;
+          if (!field.checkValidity()) return true;
+          if (field.type === "password") return false;
+
+          const value = sanitizeUserInput(
+            field.value,
+            field.maxLength > 0 ? field.maxLength : 256
+          );
+
+          return field.type === "email"
+            ? !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
+            : !value;
+        });
+
+        if (missing) {
+          message.textContent =
+            "Complete the required fields with a valid email address to preview this form.";
+          return;
+        }
+
+        const formType = form.dataset.demoForm;
+
+        const previewMessages = {
+          signin: "Sign-in preview only. Authentication is not connected; nothing was sent or saved.",
+          signup: "Account setup preview only. No account was created and nothing was sent or saved.",
+          acquisition: "Acquisition inquiry preview ready. No booking or order was submitted or saved.",
+          registration: "Records request preview ready. No official filing or verification was submitted."
+        };
+
+        message.textContent =
+          previewMessages[formType] || "Preview ready. Nothing was sent or saved.";
+      });
+    })();
+  </script>
+</body>
+</html>
